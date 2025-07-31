@@ -10,11 +10,9 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 
-# Load model
-with open('parkinsons_model.pkl', 'rb') as f:
-    model = pickle.load(f)
+model = joblib.load('parkinsons_model.joblib')
 
 # UI Title
 st.title("Parkinson's Disease Prediction App")
@@ -39,3 +37,4 @@ if st.button('Prediksi'):
         st.error("Orang ini kemungkinan MENGIDAP Parkinson.")
     else:
         st.success("Orang ini kemungkinan TIDAK mengidap Parkinson.")
+
