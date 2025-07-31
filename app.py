@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1o_4RKt5SoPvfTKTWy_L6rk5HGZaK90l7
 """
 
-!pip install streamlit
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -41,6 +39,3 @@ if st.button('Prediksi'):
         st.error("Orang ini kemungkinan MENGIDAP Parkinson.")
     else:
         st.success("Orang ini kemungkinan TIDAK mengidap Parkinson.")
-
-!streamlit run app.py
-
